@@ -8,13 +8,13 @@ import { SpinnerService } from './pages/services/spinner.service';
 })
 export class AppComponent implements OnInit {
   title = 'pokemon-project';
-  show: boolean;
+  show = false;
   constructor(private spinnerService: SpinnerService) {
 
   }
 
   ngOnInit(): void {
-    this.spinnerService.subSpinner.subscribe((res) => {
+    this.spinnerService.spinnerStatus().subscribe((res) => {
       this.show = res;
     })
   }

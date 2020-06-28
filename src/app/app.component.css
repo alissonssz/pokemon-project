@@ -1,0 +1,22 @@
+.mat-progress-bar {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 23.4rem;
+    height: 3px;
+    margin-left: 4px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 250ms linear;
+}
+
+.overlay {
+  position: fixed;
+  display: block;
+  width: 24rem;
+  height: 35.7rem;
+  background-color: aliceblue;
+  opacity: 50%;
+  z-index: 2;
+  border-radius: 10px;
+  }

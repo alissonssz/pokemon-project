@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, LOCALE_ID, forwardRef } from '@angular/core';
+import { NgModule, LOCALE_ID, forwardRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PokemonsComponent } from './pages/pokemons/pokemons.component';
@@ -17,7 +17,7 @@ import { MatPaginatorIntlPtbrService } from './pages/services/mat-paginator-intl
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { SpinnerService } from './pages/services/spinner.service';
 import { AppHttpInterceptor } from './app-http-interceptor.service';
-
+import { NgxSpinnerModule } from "ngx-spinner";
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import { AppHttpInterceptor } from './app-http-interceptor.service';
     FlexLayoutModule,
     ComponentsModule, 
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [
     PokemonApiService, 
@@ -50,6 +51,7 @@ import { AppHttpInterceptor } from './app-http-interceptor.service';
       useClass: AppHttpInterceptor
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

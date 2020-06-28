@@ -1,10 +1,7 @@
 <app-navigator></app-navigator>
-<!-- <mat-progress-spinner 
-color="primary"
-mode="indeterminate"
-*ngIf="show"
->
-</mat-progress-spinner> -->
+
 <div fxLayoutAlign="center">
     <router-outlet></router-outlet>
 </div>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-spin-clockwise" [fullScreen] = "true">
+</ngx-spinner>

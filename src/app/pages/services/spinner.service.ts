@@ -16,4 +16,8 @@ export class SpinnerService {
   hide() {
     this.subSpinner.next(false);
   }
+
+  spinnerStatus() {
+    return this.subSpinner.asObservable();
+  }
 }
