@@ -20,7 +20,7 @@ Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 CSS nativo e para posicionamento dos elementos [Flex Layout Module](https://github.com/angular/flex-layout)
 
-Houve também uso de componentes do [Angular Material](https://material.angular.io/) como framework css de suporte.
+Houve também uso de componentes do [Angular Material](https://material.angular.io/) como framework CSS de suporte.
 
 
 
