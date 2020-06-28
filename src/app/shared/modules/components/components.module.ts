@@ -6,12 +6,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { CardPokemonComponent } from './card-pokemon/card-pokemon.component';
 import { ModalPokemonInfoComponent } from './modal-pokemon-info/modal-pokemon-info.component';
+import { TradutorBooleanPipe } from 'src/app/pages/Pipes/tradutor-boolean.pipe';
 
 @NgModule({
   declarations: [
     NavigatorComponent,
     CardPokemonComponent,
-    ModalPokemonInfoComponent
+    ModalPokemonInfoComponent,
+    TradutorBooleanPipe
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,11 @@ import { ModalPokemonInfoComponent } from './modal-pokemon-info/modal-pokemon-in
   ],
   exports: [
     NavigatorComponent,
-    CardPokemonComponent
+    CardPokemonComponent,
+    TradutorBooleanPipe
+  ],
+  providers: [
+    
   ]
 })
 export class ComponentsModule { }

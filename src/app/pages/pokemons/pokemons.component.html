@@ -1,7 +1,9 @@
-<h2>Lista de pokemons:</h2>
+<h2>Lista de pokémons:</h2>
+<div class="container">
     <div fxLayout="row wrap" fxLayoutGap="10px 10px grid">
-        <app-card-pokemon fxFlex="25" fxFlex.xs="15" *ngFor="let pokemon of listaPokemon" [nome]="pokemon?.name" [url]="pokemon?.url"></app-card-pokemon>
+        <app-card-pokemon fxFlex="20" fxFlex.xs="15" *ngFor="let pokemon of listaPokemon" [name]="pokemon?.name" [url]="pokemon?.url"></app-card-pokemon>
     </div>
+</div>
 <div fxLayout="row" fxLayoutAlign="center">
     <mat-paginator #paginador [length]="totalDeItens"
     [pageSize]="tamanhoDaPagina"

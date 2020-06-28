@@ -1,12 +1,12 @@
 
 /**
  * @export PokemonSimples
- * @interface PokemonSimples Registro simples que representa um pokemon
+ * @interface PokemonSimples Registro simples que representa um pokémon
  */
 export interface PokemonSimples {
 
     /**
-     * Nome do pókemon
+     * Nome do pokémon
      */
     name: string;
     /**

@@ -1,4 +1,49 @@
-<h1 mat-dialog-title>{{data?.nome}}</h1>
+<div  fxLayoutAlign="end">
+    <button mat-icon-button mat-dialog-close><mat-icon>close</mat-icon></button>
+</div>
 <div mat-dialog-content>
- 
+    <h4>Habilidades:</h4>
+        <div *ngFor="let habilidade of detalhesPokemon?.abilities" fxLayout="row">
+             <mat-icon>flash_on</mat-icon> <span>{{habilidade?.ability?.name}}</span>
+        </div>
+    <h4>Forms:</h4>
+  
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <strong>Informações do form</strong> 
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <ng-template matExpansionPanelContent>
+                <div fxLayout="row">
+                    <mat-label><strong>Nome: </strong>{{formDetalhe?.name}}</mat-label>
+                </div>
+                <div fxLayout="row">
+                    <mat-label><strong>Apenas para batalha?:</strong> {{ formDetalhe?.is_battle_only | tradutorBoolean}} </mat-label>
+                </div>
+                <div fxLayout="row">
+                    <mat-label><strong>É padrão?: </strong> {{ formDetalhe?.is_default | tradutorBoolean}}</mat-label>
+                </div>
+                <div fxLayout="row">
+                    <mat-label><strong>É mega?: </strong> {{ formDetalhe?.is_mega | tradutorBoolean}}</mat-label>
+                </div>
+                <mat-label><strong>Version Group:</strong> {{formDetalhe?.version_group?.name}}</mat-label>
+                <div fxLayout="row">
+                    <mat-label><strong>Sprites Default: </strong></mat-label>
+                </div>
+                <div fxLayout="row">
+                    <img [src]="formDetalhe?.sprites?.front_default" alt="Sprite front shiny">
+                    <img [src]="formDetalhe?.sprites?.back_default" alt="Sprite back default">
+                </div>
+                <div fxLayout="row">
+                    <mat-label><strong>Sprites Shiny: </strong></mat-label>
+                </div>
+                <div fxLayout="row">
+                    <img [src]="formDetalhe?.sprites?.front_shiny" alt="Sprite front shiny">
+                    <img [src]="formDetalhe?.sprites?.back_shiny" alt="Sprite back shiny">
+                </div>
+            </ng-template>
+        </mat-expansion-panel>
+  
 </div>
