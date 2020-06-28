@@ -1,27 +1,26 @@
 # PokemonProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+Essa aplicação foi desenvolvida com a intenção de ser um interface visual básica para a [PokéAPI](https://pokeapi.co/).
 
-## Development server
+## Execução do projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Execute `npm start` ou `ng serve` para ativar o servidor desenvolvimento e disponibilizar a aplicação para acesso. Depois disso, navegue para `http://localhost:4200/` no seu browser.
 
-## Code scaffolding
+## Uso
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A aplicação lista os pokémons disponibilizados pela API através de paginação, ao clicar no pokemon desejado é aberto um modal com mais detalhes sobre o pokémon selecionado.
 
-## Build
+## Tecnologias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Framework
 
-## Running unit tests
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.9. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Estilo
 
-## Running end-to-end tests
+CSS nativo e para posicionamento dos elementos [Flex Layout Module](https://github.com/angular/flex-layout)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Houve também uso de componentes do [Angular Material](https://material.angular.io/) como framework css de suporte.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
