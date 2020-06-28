@@ -13,3 +13,7 @@
     border: 2px solid #ef5350;
     box-shadow: 0 0 6px #ef5350;
 }
+
+.card--text {
+    font-size:2vw
+}
