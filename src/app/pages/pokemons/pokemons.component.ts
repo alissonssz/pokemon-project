@@ -38,7 +38,6 @@ export class PokemonsComponent implements OnInit, OnDestroy, AfterViewInit  {
       takeUntil(this.destroy$)
       ).subscribe((response: ListaPokemon<PokemonSimples>) => {
           this.listaPokemon = response.results;
-          console.log('response', response);
           this.configurarPaginador(response);
         });
   }
@@ -49,7 +48,6 @@ export class PokemonsComponent implements OnInit, OnDestroy, AfterViewInit  {
 
   observarPaginador() {
     this.paginator.page.pipe(takeUntil(this.destroy$)).subscribe((pagina: PageEvent) => {
-      console.log('pagina:', pagina);
       this.consultarPokemons({limit: (pagina.pageSize), offset: ((pagina.pageIndex + 1) - 1) * pagina.pageSize} as QueryParamsPokemon);
     });
   }
