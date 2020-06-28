@@ -1,14 +1,14 @@
 # PokemonProject
 
-Essa aplicação foi desenvolvida com a intenção de ser um interface visual básica para a [PokéAPI](https://pokeapi.co/).
+Essa aplicação foi desenvolvida com a intenção de ser uma UI básica para a [PokéAPI](https://pokeapi.co/).
 
 ## Execução do projeto
 
-Execute `npm start` ou `ng serve` para ativar o servidor desenvolvimento e disponibilizar a aplicação para acesso. Depois disso, navegue para `http://localhost:4200/` no seu browser.
+Entre no diretório da aplicação através de linha de comando, e execute `npm start` ou `ng serve` para ativar o servidor desenvolvimento e disponibilizar a aplicação para acesso. Depois disso, navegue para `http://localhost:4200/` no seu browser.
 
 ## Uso
 
-A aplicação lista os pokémons disponibilizados pela API através de paginação, ao clicar no pokemon desejado é aberto um modal com mais detalhes sobre o pokémon selecionado.
+A aplicação lista os pokémons disponibilizados pela API através de paginação, ao clicar no pokémon desejado é aberto um modal com mais detalhes sobre o pokémon.
 
 ## Tecnologias
 
