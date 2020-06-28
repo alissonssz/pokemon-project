@@ -18,7 +18,8 @@ import { CardPokemonComponent } from './card-pokemon/card-pokemon.component';
     RouterModule
   ],
   exports: [
-    NavigatorComponent
+    NavigatorComponent,
+    CardPokemonComponent
   ]
 })
 export class ComponentsModule { }

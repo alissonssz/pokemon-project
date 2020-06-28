@@ -1,5 +1,10 @@
 <div>Hello World!</div>
-<div><mat-paginator #paginador [length]="totalDeItens"
+<div *ngFor="let pokemon of listaPokemon">
+    <app-card-pokemon [nome]="pokemon?.name" [url]="pokemon?.url"></app-card-pokemon>
+</div>
+<div>
+    <mat-paginator #paginador [length]="totalDeItens"
     [pageSize]="tamanhoDaPagina"
     [pageSizeOptions]="opcaoDePaginacao">
-</mat-paginator></div>
+    </mat-paginator>
+</div>

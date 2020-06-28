@@ -14,12 +14,13 @@ import { PokemonSimples } from '../models/pokemon-simples.model';
 })
 export class PokemonsComponent implements OnInit, OnDestroy, AfterViewInit  {
 
-  totalDeItens = 99;
-  tamanhoDaPagina = 10;
+  totalDeItens = 0;
+  tamanhoDaPagina = 20;
   opcaoDePaginacao = [5,10,20,30];
   destroy$: Subject<boolean> = new Subject<boolean>();
   numeroTentativas = 3;
   @ViewChild('paginador') paginator: MatPaginator;
+  listaPokemon: PokemonSimples[] = [];
 
   constructor(private pokemonApiService: PokemonApiService) { }
   
@@ -32,11 +33,14 @@ export class PokemonsComponent implements OnInit, OnDestroy, AfterViewInit  {
   }
 
   consultarPokemons(queryParams?: QueryParamsPokemon) {
-    this.pokemonApiService.getPokemons(queryParams).pipe(retry(this.numeroTentativas), takeUntil(this.destroy$)).
-      subscribe((response: ListaPokemon<PokemonSimples>) => {
-        console.log('response', response);
-        this.configurarPaginador(response);
-      });
+    this.pokemonApiService.getPokemons(queryParams).pipe(
+      retry(this.numeroTentativas), 
+      takeUntil(this.destroy$)
+      ).subscribe((response: ListaPokemon<PokemonSimples>) => {
+          this.listaPokemon = response.results;
+          console.log('response', response);
+          this.configurarPaginador(response);
+        });
   }
 
   configurarPaginador(listaPokemons: ListaPokemon<PokemonSimples>) {
@@ -46,7 +50,7 @@ export class PokemonsComponent implements OnInit, OnDestroy, AfterViewInit  {
   observarPaginador() {
     this.paginator.page.subscribe((pagina: PageEvent) => {
       console.log('pagina:', pagina);
-      this.consultarPokemons({limit: (pagina.pageSize), offset: (pagina.pageSize * pagina.pageIndex)} as QueryParamsPokemon);
+      this.consultarPokemons({limit: (pagina.pageSize), offset: ((pagina.pageIndex + 1) - 1) * pagina.pageSize} as QueryParamsPokemon);
     });
   }
 

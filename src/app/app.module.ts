@@ -29,7 +29,10 @@ import { HttpUtilService } from './pages/services/http-util.service';
     RouterModule,
     HttpClientModule
   ],
-  providers: [PokemonApiService, HttpUtilService],
+  providers: [
+    PokemonApiService, 
+    HttpUtilService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
