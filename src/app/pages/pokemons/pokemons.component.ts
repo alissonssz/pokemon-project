@@ -48,7 +48,7 @@ export class PokemonsComponent implements OnInit, OnDestroy, AfterViewInit  {
   }
 
   observarPaginador() {
-    this.paginator.page.subscribe((pagina: PageEvent) => {
+    this.paginator.page.pipe(takeUntil(this.destroy$)).subscribe((pagina: PageEvent) => {
       console.log('pagina:', pagina);
       this.consultarPokemons({limit: (pagina.pageSize), offset: ((pagina.pageIndex + 1) - 1) * pagina.pageSize} as QueryParamsPokemon);
     });

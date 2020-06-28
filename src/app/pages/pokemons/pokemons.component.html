@@ -1,8 +1,8 @@
-<div>Hello World!</div>
-<div *ngFor="let pokemon of listaPokemon">
-    <app-card-pokemon [nome]="pokemon?.name" [url]="pokemon?.url"></app-card-pokemon>
+<h2>Lista de pokemons:</h2>
+<div fxLayout="row wrap" fxLayoutGap="10px 5px grid">
+    <app-card-pokemon fxFlex="25" fxFlex.xs="15" *ngFor="let pokemon of listaPokemon" [nome]="pokemon?.name" [url]="pokemon?.url"></app-card-pokemon>
 </div>
-<div>
+<div fxLayout="row">
     <mat-paginator #paginador [length]="totalDeItens"
     [pageSize]="tamanhoDaPagina"
     [pageSizeOptions]="opcaoDePaginacao">
