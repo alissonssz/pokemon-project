@@ -8,7 +8,7 @@
         </div>
     <h4>Forms:</h4>
   
-        <mat-expansion-panel >
+        <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
               <strong>Informações do form</strong> 
@@ -31,17 +31,17 @@
                 <mat-label><strong>Grupo de Versão:</strong> {{formDetalhe?.version_group?.name}}</mat-label>
                 <div fxLayout="row">
                     <mat-label><strong>Sprites Default: </strong></mat-label>
-                </div>
-                <div fxLayout="row">
-                    <img [src]="formDetalhe?.sprites?.front_default" alt="Sprite front shiny">
-                    <img [src]="formDetalhe?.sprites?.back_default" alt="Sprite back default">
-                </div>
-                <div fxLayout="row">
+                    <div fxFlex="40">
+                        
+                        <img [src]="formDetalhe?.sprites?.front_default" alt="Sprite front shiny">
+                        <img [src]="formDetalhe?.sprites?.back_default" alt="Sprite back default">
+                    </div>
                     <mat-label><strong>Sprites Shiny: </strong></mat-label>
-                </div>
-                <div fxLayout="row">
-                    <img [src]="formDetalhe?.sprites?.front_shiny" alt="Sprite front shiny">
-                    <img [src]="formDetalhe?.sprites?.back_shiny" alt="Sprite back shiny">
+                    <div fxFlex="40">
+                        
+                        <img [src]="formDetalhe?.sprites?.front_shiny" alt="Sprite front shiny">
+                        <img [src]="formDetalhe?.sprites?.back_shiny" alt="Sprite back shiny">
+                    </div>
                 </div>
             </ng-template>
         </mat-expansion-panel>
